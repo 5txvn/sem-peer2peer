@@ -6,15 +6,14 @@ const userSchema = new mongoose.Schema({
     name: String,
     email: String,
     phone: String,
-    address: String,
-    city: String,
-    state: String,
     age: Number,
     school: String,
     id: Number,
-    gender: String,
-    createdAt: { type: Date, default: Date.now },
-    admin: Boolean
+    admin: Boolean,
+    ratings: {
+        type: [Number],
+        default: []
+    }
 })
 
 module.exports = mongoose.model("User", userSchema);

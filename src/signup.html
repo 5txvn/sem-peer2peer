@@ -1,28 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- title icon -->
-    <link rel="icon" href="/assets/icons/sem-icon.png" type="image/x-icon">
-    <title>Sign Up</title>
+  <meta charset="UTF-8">
+  <title>CodePen - Glassmorphism - 2021 BigSur</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="/assets/scripts/smoothCaret.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <form action="/signup" method="POST">
-        <input name="username" type="text" placeholder="Username">
-        <input name="password" type="password" placeholder="Password">
-        <input name="name" type="text" placeholder="Name">
-        <input name="email" type="email" placeholder="Email">
-        <input name="phone" type="text" placeholder="Phone">
-        <input name="address" type="text" placeholder="Address">
-        <input name="city" type="text" placeholder="City">
-        <input name="state" type="text" placeholder="State">
-        <input name="age" type="number" placeholder="Age">
-        <input name="school" type="text" placeholder="School">
-        <input name="id" type="text" placeholder="id">
-        <input name="gender" type="text" placeholder="Gender">
-        <input type="submit" value="Sign Up">
+<!-- partial:index.partial.html -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+<div class="glassbox">
+<h1>Peer2Peer Signup <img width="48px;" src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/green-book_1f4d7.png"></h1>
+    <h2>Welcome to Peer2Peer. To create an account, fill in the following details about yourself. If you already have an account and need to log in, please go <a class="text-danger">here</a></h2><br />
+    <form>
+        <!-- username -->
+        <h3>Username <img width="32px" src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/bust-in-silhouette_1f464.png"></h3>
+        <input type="text" placeholder="Enter username here" name="username">
+        <!-- password -->
+        <h3>Password <img width="32px" src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/locked_1f512.png"></h3>
+        <input type="password" placeholder="Enter password here" name="password">
+        <!-- email -->
+        <h3>Email <img width="32px" src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/e-mail_1f4e7.png"></h3>
+        <input type="email" placeholder="Enter email here" name="phonenumber">
+        <!-- phone number -->
+        <h3>Phone Number <img width="32px" src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/mobile-phone_1f4f1.png"></h3>
+        <input type="email" placeholder="Enter phone number here (format xxx-xxx-xxxx)" name="email">
+        <!-- first name -->
+        <h3>First Name <img width="32px" src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/name-badge_1f4db.png"></h3>
+        <input type="email" placeholder="Enter first name here" name="firstname">
+        <!-- last name -->
+        <h3>Last Name <img width="32px" src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/name-badge_1f4db.png"></h3>
+        <input type="email" placeholder="Enter last name here" name="lastname">
     </form>
+    </div>
+
+    
+    <!-- BOTTOM BAR -->
+
+<!-- partial -->
+  
 </body>
+<style>
+    input {
+    margin-bottom: 25px;
+    border: none;
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    /*
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    */
+    box-shadow: 
+    inset -10px -10px 15px rgba(255,255,255,0.55),
+    inset 10px 10px 15px rgba(70,70,70,0.12);
+    outline: none;
+    text-align: center;
+}
+::placeholder{
+    font-size: 12px;
+    font-weight: 500;
+    color: #ababab;
+    letter-spacing: 1.3px;
+}
+    body {
+  margin: 0;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f1f3;
+  /*background-image: url("https://wallpapercave.com/wp/wp10077116.png");*/
+  background-image: url("https://preview.redd.it/chh4iimgu9191.png?width=3840&format=png&auto=webp&s=9ba6ffa17d3920045c53e816b0a25f55d39b8e2a");
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center; /* First value is from left and second is from top. You can use use number as well*/
+    background-repeat:no-repeat;
+}
+::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+.glassbox {
+  box-sizing: border-box;
+  padding: 30px 50px;
+  width: 70vw;
+  height: 50vh;
+    background: rgba( 255, 255, 255, 0.10 );
+box-shadow: 0px 10px 50px 0 rgb(31 38 135 / 20%);
+/* CHANGE THIS TO CHANGE THE BLUR AMOUNT */
+backdrop-filter: blur( 25.0px );
+-webkit-backdrop-filter: blur( 25.0px );
+border-radius: 10px;
+border: 1px solid rgb(255 255 255 / 15%);
+     text-align: center;
+     overflow-y: scroll;
+}
+
+
+h1 {
+    font-size: 48px;
+    line-height: 1.2em;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.5em;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    border-radius: 10px;
+    margin-top: 2%;
+    box-shadow: inset 3px -3px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+a, a:visited, a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+</style>
 </html>

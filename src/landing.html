@@ -14,51 +14,105 @@
     <!-- title icon -->
     <link rel="icon" href="/assets/icons/sem-icon.png" type="image/x-icon">
     <title>SEM Peer2Peer</title>
+    <!-- iconify library -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <!-- animate.css library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- jquery lib -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="main">
-        <h1><span style="color:maroon">S</span><span style="color:white">E</span><span>M</span> Peer2Peer</h1>
-        <h3><i>Built for students, by students</i></h3>
-        <button type="button" class="btn btn-danger" onclick="window.location.href='/get-started'">Get Started</button>
-    </div>
+    <svg viewBox="0 0 3387 1270">
+        <path id="planePath" class="planePath" d="M-226 626c439,4 636,-213 934,-225 755,-31 602,769 1334,658 562,-86 668,-698 266,-908 -401,-210 -893,189 -632,630 260,441 747,121 1051,91 360,-36 889,179 889,179" />
+        <g id="plane">
+          <polygon class="fil1" points="-141,-10 199,0 -198,-72 -188,-61 -171,-57 -184,-57 " />
+          <polygon class="fil2" points="199,0 -141,-10 -163,63 -123,9 " />
+          <polygon class="fil3" points="-95,39 -113,32 -123,9 -163,63 -105,53 -108,45 -87,48 -90,45 -103,41 -94,41 " />
+          <path class="fil4" d="M-87 48l-21 -3 3 8 19 -4 -1 -1zm-26 -16l18 7 -2 -1 32 -7 -29 1 11 -4 -24 -1 -16 -18 10 23zm10 9l13 4 -4 -4 -9 0z" />
+          <polygon class="fil1" points="-83,28 -94,32 -65,31 -97,38 -86,49 -67,70 199,0 -123,9 -107,27 " />
+        </g>
+        <!-- Define the motion path animation -->
+        <animateMotion xlink:href="#plane" dur="5s" repeatCount="indefinite" rotate="auto">
+          <mpath xlink:href="#planePath" />
+        </animateMotion> 
+      </svg>
+      <h1 class="animate__animated animate__backInLeft">SEM Peer2Peer</h1>
+      <h3 class="animate__animated animate__backInLeft">For students, by students</h3>
+      <h4 class="animate__animated animate__backInLeft"><a href="/validate">Continue <iconify-icon icon="material-symbols:arrow-forward"></iconify-icon></a></h4>
 </body>
 <style>
-    h1 {
-        font-size: 60px;
+    @font-face {
+        font-family: ChickenPie;
+        src: url("/assets/fonts/ChickenPie.ttf")
     }
     body {
-        background-color: #ececec
-    }
-    .main {
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+  background-color: #8b2233;
+  font-family: ChickenPie;
+}
+
+.planePath {
+  stroke: #D9DADA;
+  stroke-width: .1%;
+  stroke-width: .5%;
+  stroke-dasharray: 1% 2%;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.fil1 {
+  fill: #D9DADA;
+}
+
+.fil2 {
+  fill: #C5C6C6;
+}
+
+.fil4 {
+  fill: #9D9E9E;
+}
+
+.fil3 {
+  fill: #AEAFB0;
+}
+h1 {
+    margin-left:5%;
+    color:white;
+    font-size: 96px;
+    text-shadow: -5px 5px 0 #000;
+}
+h3 {
+    margin-top: 3%;
+    margin-left: 10%;
+    color: white;
+    font-size: 48px;
+}
+h4 {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    background: rgba(139, 34, 51, 0.22);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+    box-shadow: inset -3px -3px 10px 0 rgba(0, 0, 0, 0.3)
+}
+h4 a {
+    color: white;
+    text-decoration: none;
+}
+h4 a:hover {
+    text-decoration: underline;
+    color: white;
+}
+iconify-icon {
+    margin-bottom:-5px;
+}
 </style>
-<script>
-    $(document).ready(() => {
-        $('h1').hide()
-        $('h3').hide()
-        $('h1').slideDown(1000)
-        setTimeout(() => {
-            $('h3').slideDown(1000)
-        }, 1000)
-        //typing animations
-        /*
-        let i = 0
-        let mongoText = 'Built with MongoDB for maximum efficiency and scalability 🖥️🌿'
-        let speed = 50
-        function mongoAnimation() {
-            if (i < mongoText.length) {
-                document.getElementById('mongo-info').innerHTML += mongoText.charAt(i)
-                i++
-                setTimeout(mongoAnimation, speed)
-            }
-        }
-        setTimeout(() => { mongoAnimation() }, 2250)
-        */
-    })
-</script>
 </html>
