@@ -3,13 +3,22 @@ const { default: mongoose } = require("mongoose");
 const userSchema = new mongoose.Schema({
     username: String,
     password: String,
-    name: String,
+    fullname: String,
     email: String,
     phone: String,
-    age: Number,
-    school: String,
+    school: {
+        value: String,
+        other: Boolean
+    },
+    field: {
+        value: String,
+        other: Boolean
+    },
     id: Number,
-    admin: Boolean,
+    rating: {
+        type: Number,
+        default: 0
+    },
     ratings: {
         type: [Number],
         default: []
