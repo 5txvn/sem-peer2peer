@@ -15,7 +15,7 @@ app.set("view engine", "ejs")
 //import dotenv to connect to MongoDB
 require('dotenv').config();
 //use express sessions
-app.use(session({secret: process.env.SESSION_SECRET}))
+//app.use(session({secret: process.env.SESSION_SECRET}))
 //set strictquery to false to avoid random error logging
 mongoose.set('strictQuery', false);
 
