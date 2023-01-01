@@ -1,1 +1,1 @@
-web: node ip
+web: node index
